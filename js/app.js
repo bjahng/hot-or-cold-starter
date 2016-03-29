@@ -47,6 +47,7 @@ $(document).ready(function(){
 		if(isNaN(userGuessVal) || userGuessVal < 1 || userGuessVal > 100) {
 			$("#feedback").text("Please enter a valid number between 1 and 100.");
 		}
+		//if validated...
 		else {
 			//subtract guess from random number and multiply by one if negative
 			var numDiff = numToGuess - userGuessVal;
@@ -81,6 +82,8 @@ $(document).ready(function(){
 	  		
 	  		//add to guess list
 	  		$("#guessList").append("<li>" + userGuessVal + "</li>");
+
+	  		document.getElementById("userGuess").value = "";
 	  	}
 	  	return false;
   	});
